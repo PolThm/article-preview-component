@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Colors
+$very-dark-grayish-blue: hsl(217, 19%, 35%) !default;
+$desaturated-dark-blue: hsl(214, 17%, 51%) !default;
+$grayish-blue: hsl(212, 23%, 69%) !default;
+$light-grayish-blue: hsl(210, 46%, 95%) !default;
+
+
+/// Breakpoints map
+$tablet: 768 !default;
+$large: 1024 !default;
+$desktop: 1280 !default;
+
+
+/// Font-size
+$text-xs: 0.75rem !default;
+$text-sm: 0.875rem !default;
+$text-base: 1rem !default;
+$text-lg: 1rem !default;
+$text-xl: 1.125rem !default;
+$text-2xl: 1.25rem !default;
+$text-3xl: 1.875rem !default;
+$text-4xl: 2.25rem !default;
+$text-5xl: 3rem !default;
+$text-6xl: 3.75rem !default;
+$text-7xl: 4.5rem !default;
+$text-8xl: 6rem !default;
+$text-9xl: 8rem !default;
+
+
+/// Border-radius
+$br-sm: 0.33rem !default;
+$br-base: 0.67rem !default;
+$br-lg: 1rem !default;
+$br-full: 100% !default;
+
+
+/// Margin
+$m-sm: 0.5rem !default;
+$m-base: 1rem !default;
+$m-lg: 2rem !default;
+
+
+/// Padding
+$p-sm: 0.5rem !default;
+$p-base: 1rem !default;
+$p-lg: 2rem !default;
+
+
+/// Transition
+$time: 0.3s !default;
+$easing: ease-out !default;
+
+
+/// Box shadow
+$box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/images/';
+$base-url: '/images/' !default;
