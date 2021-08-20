@@ -6,3 +6,7 @@ body {
   background: $light-grayish-blue;
   @include flex-center;
 }
+
+.article-preview {
+  background: white;
+}
