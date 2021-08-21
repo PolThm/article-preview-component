@@ -1,6 +1,5 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+$text-sm: 0.83rem;
+
 
 body {
   background: $light-grayish-blue;
@@ -10,7 +9,7 @@ body {
 
 .article-preview {
   background: white;
-  margin: $m-lg;
+  margin: $mp-lg;
   border-radius: $br-base;
   overflow: hidden;
 
@@ -20,13 +19,25 @@ body {
   }
 
   h4 {
-    @include font-size($text-sm1);
+    @include font-size($text-sm);
     font-weight: 700;
   }
 
   p {
-    @include font-size($text-sm1, $text-xl);
+    @include font-size($text-sm, $text-xl);
     color: $grayish-blue;
+  }
+
+  .toggle-view-btn {
+    @include box(32px);
+    @include flex-center;
+    border-radius: $br-full;
+    background: $light-grayish-blue;
+
+    &--active {
+      background: white;
+      color: $light-grayish-blue;
+    }
   }
 
   &__img {
@@ -35,23 +46,29 @@ body {
     object-position: top;
   }
 
-  &__content {
-    padding: $p-xl $p-xl 0 $p-xl;
-
-    .article-preview__description {
-      margin-top: $m-base;
+  &__description {
+    padding: $mp-xl $mp-xl $mp-base $mp-xl;
+    p {
+      margin-top: $mp-base;
     }
   }
 }
 
-.author-container {
-
-}
-
 .author-info {
-  padding: $p-xl 0 $p-lg 0;
-  display: flex;
+  padding: $mp-base $mp-xl $mp-base $mp-xl;
+  height: 40px;
+  @include flex-center-vert;
   justify-content: space-between;
+  opacity: 1;
+  transition: opacity 400ms;
+
+  &.inactive-step-1 {
+    opacity: 0;
+  }
+
+  &.inactive-step-2 {
+    display: none;
+  }
 
   &__content {
     display: flex;
@@ -63,17 +80,38 @@ body {
   }
 
   &__texts {
-    @include margin-horiz($m-base);
-  }
-
-  &__toggle-view-btn {
-    @include box(32px);
-    border-radius: $br-full;
-    @include flex-center;
-    background: $light-grayish-blue;
+    @include margin-horiz($mp-base);
   }
 }
 
 .sharing-bar {
+  background: $very-dark-grayish-blue;
+  padding: $mp-base $mp-xl $mp-base $mp-xl;
+  height: 40px;
+  @include flex-center;
+  justify-content: space-between;
   display: none;
+  opacity: 0;
+  transition: opacity 400ms;
+
+  &.active-step-1 {
+    display: flex;
+  }
+
+  &.active-step-2 {
+    opacity: 1;
+  }
+
+  &__content {
+    @include flex-center-vert;
+
+    h4 {
+      letter-spacing: $ls-3;
+    }
+
+    button {
+      margin-left: $mp-base;
+      @include flex-center;
+    }
+  }
 }

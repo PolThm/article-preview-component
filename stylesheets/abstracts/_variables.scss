@@ -15,10 +15,9 @@ $large: 1024 !default;
 $desktop: 1280 !default;
 
 
-/// Font-size
+/// Font-size & line-height
 $text-xs: 0.75rem !default;
-$text-sm1: 0.83rem !default;
-$text-sm2: 0.875rem !default;
+$text-sm: 0.875rem !default;
 $text-base: 1rem !default;
 $text-lg: 1.125rem !default;
 $text-xl: 1.25rem !default;
@@ -31,6 +30,18 @@ $text-7xl: 4.5rem !default;
 $text-8xl: 6rem !default;
 $text-9xl: 8rem !default;
 
+/// letter-spacing
+$ls-base: 0 !default;
+$ls-1: 0.1rem !default;
+$ls-2: 0.2rem !default;
+$ls-3: 0.3rem !default;
+$ls-4: 0.4rem !default;
+$ls-5: 0.5rem !default;
+$ls-6: 0.6rem !default;
+$ls-7: 0.7rem !default;
+$ls-8: 0.8rem !default;
+$ls-9: 0.9rem !default;
+$ls-10: 0.10rem !default;
 
 /// Border-radius
 $br-sm: 0.33rem !default;
@@ -39,20 +50,12 @@ $br-lg: 1rem !default;
 $br-full: 100% !default;
 
 
-/// Margin
-$m-sm: 0.5rem !default;
-$m-base: 1rem !default;
-$m-lg: 1.5rem !default;
-$m-xl: 2rem !default;
-$m-2xl: 3rem !default;
-
-
-/// Padding
-$p-sm: 0.5rem !default;
-$p-base: 1rem !default;
-$p-lg: 1.5rem !default;
-$p-xl: 2rem !default;
-$p-2xl: 3rem !default;
+/// Margin & padding
+$mp-sm: 0.5rem !default;
+$mp-base: 1rem !default;
+$mp-lg: 1.5rem !default;
+$mp-xl: 2rem !default;
+$mp-2xl: 3rem !default;
 
 
 /// Transition

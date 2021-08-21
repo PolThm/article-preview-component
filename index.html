@@ -13,12 +13,14 @@
   <section class="article-preview">
     <img class="article-preview__img" src="images/drawers.jpg" alt="Furniture with drawers and decorations">
     <div class="article-preview__content">
-      <h3>Shift the overall look and feel by adding these wonderful
-      touches to furniture in your home</h3>
+      <div class="article-preview__description">
+        <h3>Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home</h3>
 
-      <p class="article-preview__description">Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I’ve got some simple tips
-        to help you make any room feel complete.</p>
+        <p>Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.</p>
+      </div>
 
       <div class="author-container">
         <div class="author-info">
@@ -29,14 +31,14 @@
               <p>28 Jun 2020</p>
             </div>
           </div>
-          <button class="author-info__toggle-view-btn" onclick="">
+          <button class="toggle-view-btn" onclick="toggleSharingBar()">
             <img src="images/icon-share.svg" alt="Sharing icon">
           </button>
         </div>
 
         <div class="sharing-bar">
           <div class="sharing-bar__content">
-            <h4>Share</h4>
+            <h4>SHARE</h4>
             <button class="facebook-sharing" onclick="">
               <img src="images/icon-facebook.svg" alt="Facebook icon">
             </button>
@@ -47,7 +49,7 @@
               <img src="images/icon-pinterest.svg" alt="Pinterest icon">
             </button>
           </div>
-          <button class="sharing-bar__toggle-view-btn" onclick="">
+          <button class="toggle-view-btn toggle-view-btn--active" onclick="toggleSharingBar()">
             <img src="images/icon-share.svg" alt="Sharing icon">
           </button>
         </div>
@@ -55,4 +57,6 @@
     </div>
   </section>
 </body>
+
+<script src="script.js"></script>
 </html>
