@@ -17,11 +17,12 @@ $desktop: 1280 !default;
 
 /// Font-size
 $text-xs: 0.75rem !default;
-$text-sm: 0.875rem !default;
+$text-sm1: 0.83rem !default;
+$text-sm2: 0.875rem !default;
 $text-base: 1rem !default;
-$text-lg: 1rem !default;
-$text-xl: 1.125rem !default;
-$text-2xl: 1.25rem !default;
+$text-lg: 1.125rem !default;
+$text-xl: 1.25rem !default;
+$text-2xl: 1.5rem !default;
 $text-3xl: 1.875rem !default;
 $text-4xl: 2.25rem !default;
 $text-5xl: 3rem !default;
@@ -41,13 +42,17 @@ $br-full: 100% !default;
 /// Margin
 $m-sm: 0.5rem !default;
 $m-base: 1rem !default;
-$m-lg: 2rem !default;
+$m-lg: 1.5rem !default;
+$m-xl: 2rem !default;
+$m-2xl: 3rem !default;
 
 
 /// Padding
 $p-sm: 0.5rem !default;
 $p-base: 1rem !default;
-$p-lg: 2rem !default;
+$p-lg: 1.5rem !default;
+$p-xl: 2rem !default;
+$p-2xl: 3rem !default;
 
 
 /// Transition

@@ -72,23 +72,41 @@
   justify-content: center;
 }
 
+@mixin padding-horiz($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin padding-vert($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin margin-horiz($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin margin-vert($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
 
 /// Font Size
 @mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
-  font-size: $font-size * 1px;
-  // font-size: $font-size * 0.1rem;
-  // example using rem values and 62.5% font-size so 1rem = 10px
+  font-size: $font-size;
 
   @if $line-height==normal {
     line-height: normal;
   } @else {
-    line-height: $line-height / $font-size;
+    line-height: $line-height;
   }
 
   @if $letter-spacing==normal {
     letter-spacing: normal;
   } @else {
-    letter-spacing: #{$letter-spacing / $font-size}em;
+    letter-spacing: $letter-spacing;
   }
 }
 

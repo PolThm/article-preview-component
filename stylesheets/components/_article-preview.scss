@@ -5,8 +5,75 @@
 body {
   background: $light-grayish-blue;
   @include flex-center;
+  min-height: 100vh;
 }
 
 .article-preview {
   background: white;
+  margin: $m-lg;
+  border-radius: $br-base;
+  overflow: hidden;
+
+  h3 {
+    @include font-size($text-base, $text-2xl);
+    font-weight: 700;
+  }
+
+  h4 {
+    @include font-size($text-sm1);
+    font-weight: 700;
+  }
+
+  p {
+    @include font-size($text-sm1, $text-xl);
+    color: $grayish-blue;
+  }
+
+  &__img {
+    @include box(100%, 218px);
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__content {
+    padding: $p-xl $p-xl 0 $p-xl;
+
+    .article-preview__description {
+      margin-top: $m-base;
+    }
+  }
+}
+
+.author-container {
+
+}
+
+.author-info {
+  padding: $p-xl 0 $p-lg 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+
+    img {
+      @include box(40px);
+      border-radius: $br-full;
+    }
+  }
+
+  &__texts {
+    @include margin-horiz($m-base);
+  }
+
+  &__toggle-view-btn {
+    @include box(32px);
+    border-radius: $br-full;
+    @include flex-center;
+    background: $light-grayish-blue;
+  }
+}
+
+.sharing-bar {
+  display: none;
 }
