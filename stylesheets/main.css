@@ -134,7 +134,7 @@ body {
   align-items: center;
   justify-content: space-between;
   opacity: 1;
-  transition: opacity 400ms;
+  transition: opacity 500ms;
 }
 .author-info.inactive-step-1 {
   opacity: 0;
@@ -165,7 +165,7 @@ body {
   justify-content: space-between;
   display: none;
   opacity: 0;
-  transition: opacity 400ms;
+  transition: opacity 500ms;
 }
 .sharing-bar.active-step-1 {
   display: flex;

@@ -60,7 +60,7 @@ body {
   @include flex-center-vert;
   justify-content: space-between;
   opacity: 1;
-  transition: opacity 400ms;
+  transition: opacity 500ms;
 
   &.inactive-step-1 {
     opacity: 0;
@@ -92,7 +92,7 @@ body {
   justify-content: space-between;
   display: none;
   opacity: 0;
-  transition: opacity 400ms;
+  transition: opacity 500ms;
 
   &.active-step-1 {
     display: flex;
