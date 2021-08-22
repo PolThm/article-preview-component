@@ -184,9 +184,13 @@ body {
       object-position: left;
       border-radius: $br-base 0 0 $br-base;
     }
+
+    &__description p {
+      margin-top: $mp-sm;
+    }
   }
   .author-info {
-    padding: $mp-sm $mp-xl $mp-lg $mp-xl;
+    padding: $mp-sm $mp-xl $mp-xl $mp-xl;
 
     &.inactive-step-1, &.inactive-step-2 {
       opacity: unset;
