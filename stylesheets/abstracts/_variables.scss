@@ -10,9 +10,10 @@ $light-grayish-blue: hsl(210, 46%, 95%) !default;
 
 
 /// Breakpoints map
-$tablet: 768 !default;
-$large: 1024 !default;
-$desktop: 1280 !default;
+$tablet: 576 !default;
+$desktop: 768 !default;
+$lg-desktop: 992 !default;
+$xl-desktop: 1200 !default;
 
 
 /// Font-size & line-height
@@ -56,6 +57,7 @@ $mp-base: 1rem !default;
 $mp-lg: 1.5rem !default;
 $mp-xl: 2rem !default;
 $mp-2xl: 3rem !default;
+$mp-3xl: 6rem !default;
 
 
 /// Transition

@@ -1,6 +1,5 @@
 $text-sm: 0.83rem;
 
-
 body {
   background: $light-grayish-blue;
   @include flex-center;
@@ -11,16 +10,17 @@ body {
   background: white;
   margin: $mp-lg;
   border-radius: $br-base;
-  overflow: hidden;
 
   h3 {
     @include font-size($text-base, $text-2xl);
     font-weight: 700;
+    color: $very-dark-grayish-blue;
   }
 
   h4 {
     @include font-size($text-sm);
     font-weight: 700;
+    color: $very-dark-grayish-blue;
   }
 
   p {
@@ -34,9 +34,16 @@ body {
     border-radius: $br-full;
     background: $light-grayish-blue;
 
+    .icon-share-white {
+      display: none;
+    }
+
     &--active {
-      background: white;
-      color: $light-grayish-blue;
+      background: $desaturated-dark-blue;
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 
@@ -44,6 +51,7 @@ body {
     @include box(100%, 218px);
     object-fit: cover;
     object-position: top;
+    border-radius: $br-base $br-base 0 0;
   }
 
   &__description {
@@ -52,6 +60,10 @@ body {
       margin-top: $mp-base;
     }
   }
+}
+
+.author-container {
+  position: relative;
 }
 
 .author-info {
@@ -88,6 +100,7 @@ body {
   background: $very-dark-grayish-blue;
   padding: $mp-base $mp-xl $mp-base $mp-xl;
   height: 40px;
+  border-radius: 0 0 $br-base $br-base;
   @include flex-center;
   justify-content: space-between;
   display: none;
@@ -107,11 +120,83 @@ body {
 
     h4 {
       letter-spacing: $ls-3;
+      color: $grayish-blue;
     }
 
     button {
       margin-left: $mp-base;
       @include flex-center;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@include breakpoint($tablet) {
+  .article-preview {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    max-width: 730px;
+    margin: $mp-3xl;
+
+    h3 {
+      @include font-size($text-xl, $text-3xl);
+
+    }
+
+    &__img {
+      @include box(100%);
+      object-fit: cover;
+      object-position: left;
+      border-radius: $br-base 0 0 $br-base;
+    }
+  }
+  .author-info {
+    padding: $mp-sm $mp-xl $mp-lg $mp-xl;
+
+    &.inactive-step-1, &.inactive-step-2 {
+      opacity: unset;
+      display: flex;
+
+      .toggle-view-btn {
+        background: $desaturated-dark-blue;
+
+        svg path {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  .sharing-bar {
+    position: absolute;
+    bottom: 6rem;
+    right: -4.4rem;
+    padding: $mp-sm $mp-xl;
+    border-radius: $br-base;
+
+    &.active-step-1, &.active-step-2 {
+      opacity: unset;
+      display: flex;
+    }
+
+    .toggle-view-btn {
+      display: none;
+    }
+
+    &:after {
+      content:'';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-top: solid 12px $very-dark-grayish-blue;
+      border-left: solid 12px transparent;
+      border-right: solid 12px transparent;
     }
   }
 }
