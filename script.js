@@ -1,8 +1,7 @@
 const toggleSharingBar = () => {
-    let sharingBar = document.querySelector('.sharing-bar');
-    let authorInfo = document.querySelector('.author-info');
-    const width  = window.innerWidth || document.documentElement.clientWidth ||
-        document.body.clientWidth
+    const sharingBar = document.querySelector('.sharing-bar');
+    const authorInfo = document.querySelector('.author-info');
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 
     if (width < 576) {
         if (sharingBar.classList.contains("active-step-2")) {
