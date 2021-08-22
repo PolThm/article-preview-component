@@ -1,4 +1,5 @@
 $text-sm: 0.83rem;
+$sm-mobile: 340;
 
 body {
   background: $light-grayish-blue;
@@ -33,17 +34,35 @@ body {
     @include flex-center;
     border-radius: $br-full;
     background: $light-grayish-blue;
+    transition: background .3s;
 
-    .icon-share-white {
-      display: none;
+    svg path {
+      transition: fill .3s;
+      fill: $desaturated-dark-blue;
+    }
+
+    @include on-event {
+      background: $orange;
+
+      svg path {
+        fill: white;
+      }
     }
 
     &--active {
       background: $desaturated-dark-blue;
-    }
 
-    &:hover {
-      opacity: 0.8;
+      svg path {
+        fill: white;
+      }
+
+      @include on-event {
+        background: $orange;
+
+        svg path {
+          fill: $very-dark-grayish-blue;
+        }
+      }
     }
   }
 
@@ -119,6 +138,7 @@ body {
     @include flex-center-vert;
 
     h4 {
+      display: none;
       letter-spacing: $ls-3;
       color: $grayish-blue;
     }
@@ -127,10 +147,23 @@ body {
       margin-left: $mp-base;
       @include flex-center;
 
-      &:hover {
-        opacity: 0.8;
+      svg path {
+        transition: fill .3s;
+        fill: white;
+      }
+
+      @include on-event {
+        svg path {
+          fill: $orange;
+        }
       }
     }
+  }
+}
+
+@include breakpoint($sm-mobile) {
+  .sharing-bar__content h4 {
+    display: block;
   }
 }
 
@@ -143,7 +176,6 @@ body {
 
     h3 {
       @include font-size($text-xl, $text-3xl);
-
     }
 
     &__img {
@@ -165,6 +197,14 @@ body {
 
         svg path {
           fill: white;
+        }
+
+        @include on-event {
+          background: $orange;
+
+          svg path {
+              fill: $desaturated-dark-blue;
+          }
         }
       }
     }
