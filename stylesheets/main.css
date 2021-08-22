@@ -243,10 +243,15 @@ body {
     right: -4.4rem;
     padding: 0.5rem 2rem;
     border-radius: 0.67rem;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
   }
   .sharing-bar.active-step-1, .sharing-bar.active-step-2 {
-    opacity: unset;
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s;
   }
   .sharing-bar .toggle-view-btn {
     display: none;

@@ -176,10 +176,11 @@ body {
     right: -4.4rem;
     padding: $mp-sm $mp-xl;
     border-radius: $br-base;
+    display: flex;
+    @include fade('hide');
 
     &.active-step-1, &.active-step-2 {
-      opacity: unset;
-      display: flex;
+      @include fade('show');
     }
 
     .toggle-view-btn {
