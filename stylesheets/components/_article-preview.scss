@@ -29,7 +29,7 @@ body {
     color: $grayish-blue;
   }
 
-  .toggle-view-btn {
+  .toggle-sharing-bar-btn {
     @include box(32px);
     @include flex-center;
     border-radius: $br-full;
@@ -196,7 +196,7 @@ body {
       opacity: unset;
       display: flex;
 
-      .toggle-view-btn {
+      .toggle-sharing-bar-btn {
         background: $desaturated-dark-blue;
 
         svg path {
@@ -227,7 +227,7 @@ body {
       @include fade('show');
     }
 
-    .toggle-view-btn {
+    .toggle-sharing-bar-btn {
       display: none;
     }
 
