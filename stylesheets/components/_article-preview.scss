@@ -1,4 +1,6 @@
 $text-sm: 0.83rem;
+$text-xl: 1.3rem;
+$text-3xl: 1.8rem;
 $sm-mobile: 340;
 
 body {
@@ -11,6 +13,7 @@ body {
   background: white;
   margin: $mp-lg;
   border-radius: $br-base;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 
   h3 {
     @include font-size($text-base, $text-2xl);
