@@ -2,6 +2,7 @@ $text-sm: 0.83rem;
 $text-xl: 1.3rem;
 $text-3xl: 1.8rem;
 $sm-mobile: 340;
+$mp-xl2: 2.5rem;
 
 body {
   background: $light-grayish-blue;
@@ -189,12 +190,16 @@ body {
       border-radius: $br-base 0 0 $br-base;
     }
 
-    &__description p {
-      margin-top: $mp-sm;
+    &__description {
+      padding: $mp-xl $mp-xl2 $mp-base $mp-xl;
+
+      p {
+        margin-top: $mp-sm;
+      }
     }
   }
   .author-info {
-    padding: $mp-sm $mp-xl $mp-xl $mp-xl;
+    padding: $mp-sm $mp-xl2 $mp-xl $mp-xl;
 
     &.inactive-step-1, &.inactive-step-2 {
       opacity: unset;
