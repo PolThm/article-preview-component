@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://polthm.github.io/article-preview/](https://polthm.github.io/article-preview/)
+- Live Site URL: [https://polthm.github.io/article-preview-component/](https://polthm.github.io/article-preview-component/)
 
 ## My process
 
